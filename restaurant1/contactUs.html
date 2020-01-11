@@ -6,7 +6,67 @@
 </head>
 <body>
 <!--Menu is here for testing remove later-->
-<h1>Matt's Burger Shack (contact us)</h1>
+<h1>Matt's Burger Shack</h1>
+
+<hr />
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contactUs.html">Contact Us</a>
+</nav>
+<hr />
+<form action="contactUs.html" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"> <br />
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="name"> <br />
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="name"> <br />
+
+    <label for="reason">Reason for inquiry</label>
+    <select id="reason" name="reason">
+        <option value="catering" selected>Catering</option>
+        <option value="Private Party">Private Party</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Other</option>
+    </select> <br />
+
+    <label for="info">Additional Information:</label>
+    <textarea id="info" name="info"></textarea>
+
+    <fieldset>
+        <legend>Have you been to the restaurant?</legend>
+        <input type="radio" id="choice1" name="question" value="yes">
+        <label for="choice1">Yes</label>
+        <input type="radio" id="choice2" name="question" value="no">
+        <label for="choice2">No</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Best days to contact you:</legend>
+        <input type="checkbox" id="m" name="day" value="m">
+        <label for="m">M</label>
+        <input type="checkbox" id="t" name="day" value="t">
+        <label for="t">T</label>
+        <input type="checkbox" id="w" name="day" value="w">
+        <label for="w">W</label>
+        <input type="checkbox" id="th" name="day" value="th">
+        <label for="th">Th</label>
+        <input type="checkbox" id="f" name="day" value="f">
+        <label for="f">F</label>
+    </fieldset>
+
+    <input type="submit" name="submit" value="Submit Request">
+</form>
+
+<hr />
+
+<footer>
+    <p>123 Spruce Street, NY, 11222 <br />
+        1-234-567-8989</p>
+</footer>
 
 </body>
 </html>
