@@ -14,30 +14,58 @@
     </li>
 
     <a href="HelloWorld.html">Link to first code along, hello world.</a>
+    <div id="html">
     <h2>Important points from HTML course.</h2>
-    <ul>
-        <li>Tags are not displayed by the browser but tell the browser how to process content or what they represent.</li>
-        <li>HTML document is a collection of nested HTML tags that describe how the browser should read the content. Handles
-            structure of the document.</li>
-        <li>Head element handles the words inside of the tab in the browser (Probably where favicons go too).</li>
-        <li>Doctype confirms that the document follows HTML5.</li>
-        <li style="color: red">Attribute is an extra piece of information in a tag to give it definition, context, or identity.
-            EX. id =</li>
-        <li>Formatting tags include <b>bold</b>, <strong>strong</strong>, <i>italics</i>, <em>emphasis</em>, superscript
-            (ex. n<sup>2</sup>), and subscript (ex. H<sub>2</sub>O).</li>
-        <li><ins>Inserted text?</ins> and <del>deleted text</del> and <mark>marked text</mark>.</li>
-        <li><code>public static void main(String args[]){<br>
-                    System.out.println("Hello world!")<br>
-                  }</code></li>
-        <li><!--A secret li that you would need to go to the code for.--></li>
-        <li><a href="portfolio/CodeAlong2.html">Link to code along 2.</a></li>
-        <li>A website's homepage can have one of three filenames: index.html, home.html, or default.html.</li>
-        <li>Block elements create a block of content in its parent started on a newline. Paragraphs, divs, head, body, etc. </li>
-        <li>Content to be seen in the browser must be in the body.SS</li>
-        <li>Semantic elements (footer, header, article, section, main) are just divs that are named so that you can organize
-        css and js better and also help organize the items.</li>
-        <li>HTML code characters always start with the & (ampersand) symbol and end with ; (semi-colon). &copy</li>
-    </ul>
+        <ul>
+            <li>Tags are not displayed by the browser but tell the browser how to process content or what they represent.</li>
+            <li>HTML document is a collection of nested HTML tags that describe how the browser should read the content. Handles
+                structure of the document.</li>
+            <li>Head element handles the words inside of the tab in the browser (Probably where favicons go too).</li>
+            <li>Doctype confirms that the document follows HTML5.</li>
+            <li style="color: red">Attribute is an extra piece of information in a tag to give it definition, context, or identity.
+                EX. id =</li>
+            <li>Formatting tags include <b>bold</b>, <strong>strong</strong>, <i>italics</i>, <em>emphasis</em>, superscript
+                (ex. n<sup>2</sup>), and subscript (ex. H<sub>2</sub>O).</li>
+            <li><ins>Inserted text?</ins> and <del>deleted text</del> and <mark>marked text</mark>.</li>
+            <li><code>public static void main(String args[]){<br>
+                        System.out.println("Hello world!")<br>
+                      }</code></li>
+            <li><!--A secret li that you would need to go to the code for.--></li>
+            <li><a href="portfolio/index.html">Link to code along 2.</a></li>
+            <li>A website's homepage can have one of three filenames: index.html, home.html, or default.html.</li>
+            <li>Block elements create a block of content in its parent started on a newline. Paragraphs, divs, head, body, etc. </li>
+            <li>Content to be seen in the browser must be in the body.SS</li>
+            <li>Semantic elements (footer, header, article, section, main) are just divs that are named so that you can organize
+            css and js better and also help organize the items.</li>
+            <li>HTML code characters always start with the & (ampersand) symbol and end with ; (semi-colon). &copy</li>
+            <li>Inline element must be nested in a block element and does not take up horizontal width of parent container.
+            Span is the inline Div.</li>
+            <li>Anchor elements identifies content that a user can click to open a separate page.</li>
+            <li>Target attribute for anchor tag defines how the linked content will open. This is how you have an anchor tag
+            open to a new tab.</li>
+            <li>Internal links use relative paths to the file you are linking to.</li>
+            <li>Specifying only height or width resizes the image while maintaining the aspect ratio.</li>
+            <li>Definition list is the 3rd list I had never heard of. DT to create thing to be defined and DD for the definition.</li>
+            <li>Input tag is very versatile and can take many forms based off of the attribute tag like text, radio or submit.</li>
+        </ul>
+    </div>
+
+    <div id="css">
+        <h2>Important points from the CSS course</h2>
+        <ul>
+            <li>While HTML handles structure of document, CSS handles how it looks and is laid out.</li>
+            <li>CSS rule set is the block of code that handles all of the styling for an HTML element or group of elements.</li>
+            <li>CSS selectors: (. for class, # for id, and nothing for an existing html element.</li>
+            <li>CSS declarations end in semi-colons ;</li>
+            <li>CSS declarations are made of of properties and values. Name the property and then the value that you want the property set to. Color: red;</li>
+            <li>Same comments as Java, /* */</li>
+            <li>Applying styling to multiple elements is very DRY so we don't repeat code everywhere and then have to clean it up if it goes wrong.</li>
+            <li>Formatting applied to parent elements is applied to children and nested elements. Inline elements in a paragraph for instance.</li>
+            <li>You can list elements by comma separating them so that CSS styling is applied to multiple selected elements.</li>
+            <li>Inline styling is when you use the style attribute of a HTML element. Internal style sheet is a set of rules applied to the head element (page specific). External style sheet is a separate .css file used to format a page applied via style link.</li>
+            <li>Inline styles take precedence over the other methods.</li>
+        </ul>
+    </div>
 
     <footer>
         <p>Follow me on my <a href="https://github.com/mleong1">Github</a></p>

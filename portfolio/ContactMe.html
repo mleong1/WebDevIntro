@@ -6,7 +6,41 @@
 </head>
 <body>
 
-<h1>Contact Me</h1>
-<a href="mailto:mleong@alumni.skidmore.edu">Send me an email.</a>
+    <h1>Contact Me</h1>
+    <hr>
+    <a href="submit.html" alt="Home">Home</a>
+    <hr>
+
+    <h2>Information Request</h2>
+    <form action="index.html" method="post">
+        <label for="firstNameInput">First name: <br>
+        <input type="text" name="firstNameInput" id="firstNameInput" required> <br>
+        Last name: <br>
+        <input type="text" name="lastNameInput" required> <br>
+        Phone Number: <br>
+        <input type="text" name="phoneNumberInput" required> <br>
+        Best time to call: <br>
+        <Select name="timeToCall">
+            <option value="Morning">Morning (8AM to 12PM Eastern)</option>
+            <option value="Afternoon">Afternoon (12PM to 5PM Eastern)</option>
+            <option value="Evening">Evening (5PM to 8PM Eastern)</option>
+        </Select> <br>
+        <fieldset>
+            I am interested in (check all that apply): <br>
+            <input type="checkbox" name="interest" value="frontEnd">Front end development <br>
+            <input type="checkbox" name="interest" value="backEnd">Back end development <br>
+            <input type="checkbox" name="interest" value="database">Database development <br>
+        </fieldset>
+        <fieldset>
+            I have filled in the client questionnaire form: <br>
+            <input type="radio" name="filledIn" value="yes" required>Yes <br>
+            <input type="radio" name="filledIn" value="no">No <br>
+        </fieldset>
+        Additional Information: <br>
+        <textarea name="Description"></textarea><br>
+        <input type="submit" value="submit"> <br>
+
+    </form>
+    <a href="mailto:mleong@alumni.skidmore.edu">Send me an email.</a>
 </body>
 </html>
