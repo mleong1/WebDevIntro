@@ -1,16 +1,78 @@
-body {
-    background-color: lightblue;
+/*
+Creator: Matthew Leong
+Date created: 1/12/20
+Date last modified: 1/12/20
+*/
+
+body{
+    background-color: #d78a76;
+    font-family: 'Gelasio', serif;
+    color: #0d1f2d;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-header, footer {
-    background-color: darkslategray;
-    color: white;
+header, footer{
+    background-color: #0d1f2d;
+    color: #fef9ff;
+    height: 100px;
+    text-align: center;
+    padding: 30px 10px 20px 10px;
 }
 
-.border {
-    border: thick solid blue;
+h1{
+    font-size: 2.5em;
 }
 
-#experience {
-    border: thick dashed orange;
+nav{
+    border-top: 3px dashed #0d1f2d;
+    border-bottom: 3px dashed #0d1f2d;
+    margin-top: 4px;
+}
+
+nav a {
+    background-color: #f3ca40;
+    color: #0d1f2d;
+    padding: 8px;
+    border: thin solid #0d1f2d;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 20px;
+    width: 100px;
+    float: left;
+}
+
+nav a:hover {
+    background-color: #0d1f2d;
+    color: #f3ca40;
+}
+
+nav a:active {
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: #e4c3ad;
+}
+
+article {
+    margin-bottom: 16px;
+
+}
+
+article img{
+    float: left;
+    width: 250px;
+}
+
+/*
+Float left since we want it aligned to the right of the image, but floating on the left of its container, div.rightcontent
+ */
+.rightContent{
+    float: left;
+}
+
+.clear-float {
+    clear:both;
 }

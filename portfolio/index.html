@@ -2,16 +2,46 @@
 <!--
 Name: Matthew Leong
 Date Created: 1/8/20
-Most recent revision: 1/9/20
+Most recent revision: 1/12/20
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Code Along: Matt's portfolio</title>
     <link rel="stylesheet" href="CSS/index.css"  type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
     <style>
-        header{
-            background-color: magenta;
+        caption{
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        table, th, td{
+            border: none;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+
+        table{
+            width: 90%;
+            margin: auto;
+        }
+
+        tr{
+            height: 30px;
+        }
+
+        th{
+            background-color: #f08a4b;
+        }
+
+        tr:nth-child(odd){
+            background-color: #f3ca40;
+        }
+
+        tr:nth-child(even){
+            background-color: #f08a4b;
         }
     </style>
 </head>
@@ -22,10 +52,12 @@ Most recent revision: 1/9/20
 
     <!--Need to add pages for the below links.-->
     <nav class="border">
-        <hr style="border: thin dotted red">
-        a href="Projects.html">Projects</a> <a href="ContactMe.html">Contact Me</a> <a href="Testimonials.html">Testimonials</a>
-        <hr style="width: 50%; border: 2px solid blue">
+        <p><a href="Projects.html">Projects</a></p>
+        <p><a href="ContactMe.html">Contact Me</a></p>
+        <p></p><a href="Testimonials.html">Testimonials</a></p>
+        <div class="clear-float"></div>
     </nav>
+
     <section>
         <article id="AboutMe" class="border">
             <h2><em>About Me</em></h2>
@@ -39,35 +71,48 @@ Most recent revision: 1/9/20
                     great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to
                     obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure
                     that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+            <!--This div uses the clear:both css declaration to end floats.-->
+            <div class="clear-float"></div>
         </article>
         <article id="PastExperiences">
             <h2><em>Past Experiences</em></h2>
-                <caption>Employment History</caption>
-                <table width="90%" border="1">
-                    <tr>
-                        <th>Years of Employment</th>
-                        <th>Title</th>
-                        <th>Company</th>
-                    </tr>
-                    <tr>
-                        <td>2019-Present</td>
-                        <td>Senior Technical Engineer</td>
-                        <td>Nfrastructure</td>
-                    </tr>
-                    <tr>
-                        <td>2018-2019</td>
-                        <td>Office 365 Premier Ambassador</td>
-                        <td>Nfrastructure</td>
-                    </tr>
-                    <tr>
-                        <td>2016-2017</td>
-                        <td>Web Dev Intern</td>
-                        <td>Windrush</td>
-                    </tr>
-                </table>
+            <img src="images/chess.jpg" alt="Image of chess.">
+                <div class="rightContent">
+                    <table width="90%" border="1">
+                        <caption>Employment History</caption>
+                        <thead>
+                            <tr>
+                                <th>Years of Employment</th>
+                                <th>Title</th>
+                                <th>Company</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2019-Present</td>
+                                <td>Senior Technical Engineer</td>
+                                <td>Nfrastructure</td>
+                            </tr>
+                            <tr>
+                                <td>2018-2019</td>
+                                <td>Office 365 Premier Ambassador</td>
+                                <td>Nfrastructure</td>
+                            </tr>
+                            <tr>
+                                <td>2016-2017</td>
+                                <td>Web Dev Intern</td>
+                                <td>Windrush</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <!--This div uses the clear:both css declaration to end floats.-->
+            <div class="clear-float"></div>
         </article>
         <article id="Hobbies">
             <h2><b>Hobbies</b></h2>
+            <img src="images/computer.jpg" alt="Old computer.">
+            <div class="rightContent">
                 <ul>
                     <li>Reasons to write a webpage and code:</li>
                     <ol>
@@ -87,11 +132,13 @@ Most recent revision: 1/9/20
                         <li>Read books.</li>
                     </ul>
                 </ul>
+            </div>
+            <!--This div uses the clear:both css declaration to end floats.-->
+            <div class="clear-float"></div>
         </article>
     </section>
 
-    <footer style="background-color: red">
-        <hr />
+    <footer>
         <p>&copy; 2020 Matthew Leong. All rights reserved.</p>
     </footer>
 </body>

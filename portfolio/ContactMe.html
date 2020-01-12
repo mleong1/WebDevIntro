@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>ContactMe</title>
+
+    <link rel="stylesheet" href="CSS/index.css"  type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
+    <link href="CSS/form.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
     <h1>Contact Me</h1>
-    <hr>
-    <a href="submit.html" alt="Home">Home</a>
-    <hr>
+    <nav class="border">
+        <p><a href="Projects.html">Projects</a></p>
+        <p><a href="ContactMe.html">Contact Me</a></p>
+        <p></p><a href="Testimonials.html">Testimonials</a></p>
+        <div class="clear-float"></div>
+    </nav>
 
     <h2>Information Request</h2>
     <form action="index.html" method="post">
-        <label for="firstNameInput">First name: <br>
+        < for="firstNameInput">First name: <br>
         <input type="text" name="firstNameInput" id="firstNameInput" required> <br>
         Last name: <br>
         <input type="text" name="lastNameInput" required> <br>
@@ -39,8 +46,11 @@
         Additional Information: <br>
         <textarea name="Description"></textarea><br>
         <input type="submit" value="submit"> <br>
-
     </form>
     <a href="mailto:mleong@alumni.skidmore.edu">Send me an email.</a>
+    <footer>
+        <p>123 Spruce Street, NY, 11222 <br />
+            1-234-567-8989</p>
+    </footer>
 </body>
 </html>
