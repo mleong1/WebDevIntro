@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML Learning Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Practice Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+
+        body{
+            font-family: 'Gelasio', serif;
+        }
+
+        nav {
+            border-top: thin #5b7d87 solid;
+            border-bottom: thin #5b7d87 solid;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        nav .btn {
+            background-color: #5b7d87;
+            color: #fef9ff;
+        }
+
+        nav .btn:hover{
+            font-weight: bold;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+
+    </style>
 </head>
 <body>
+
     <h1>This is a heading.</h1>
     <p>The content of the document. <b>This sentence is bold</b>. <i>This sentence is italicized</i>.</p>
     <hr />
@@ -47,6 +81,8 @@
             <li>Specifying only height or width resizes the image while maintaining the aspect ratio.</li>
             <li>Definition list is the 3rd list I had never heard of. DT to create thing to be defined and DD for the definition.</li>
             <li>Input tag is very versatile and can take many forms based off of the attribute tag like text, radio or submit.</li>
+            <li>Some HTML elements have different states (when you hover over a link). Pseudo classes let you style those states.</li>
+            <li>For links and their pseudo classes, they should be styled in the order of link, visited, hover, active.</li>
         </ul>
     </div>
 
@@ -64,11 +100,78 @@
             <li>You can list elements by comma separating them so that CSS styling is applied to multiple selected elements.</li>
             <li>Inline styling is when you use the style attribute of a HTML element. Internal style sheet is a set of rules applied to the head element (page specific). External style sheet is a separate .css file used to format a page applied via style link.</li>
             <li>Inline styles take precedence over the other methods.</li>
+            <li>Padding is whitespace around the content in the border, the border is the literal border around the content, and the margin is the whitespace around the border.</li>
+            <li>Fixed values are a measurement of pixels. Relative values are percentages of parent elements.</li>
+            <li>Padding takes fixed lengths. There is a padding-top, padding-left, padding-right, and a padding-bottom. You can also use padding: 5px, 15px, 15px, 5px to set top, right, bottom left. Or you can use padding: 5px to set all sides.</li>
+            <li>Border also lets you specify all 4 directions. You can specify a thickness, style, and a color.</li>
+            <li>Margin is the same as padding just outside of the border.</li>
+            <li>Formula for the height of an element: margin-top + border-top + padding-top + (height of the content) + padding-bottom + border-bottom + margin-bottom </li>
+            <li>Formula for the width: margin-left + border-left + padding-left + (width of the content) + padding-right + border-right + margin-right</li>
+            <li>Keep contrast up between font and background color. Light font on a dark background or vice versa.</li>
+            <li>Background shorthand: background: color image repeat attachment position;</li>
+            <li style="color: red">Color specifically only changes text color.</li>
+            <li>The CSS attribute text-align allows us to align text to the left of the page, to the right, centered, or justifed.</li>
+            <li>If you use fixed sizes like pixels (px) or points (pt) instead, you run the risk of having very large fonts on small screens or very small fonts on larger screens.</li>
+            <li>If you include two selectors separated by a space (instead of a comma), the first selector is the parent of the second selector, and the style will apply only to children of that parent. In this case, the notation tfoot td means "td elements inside a tfoot element," and the style will not apply to other td elements in the table.</li>
+            <li>Thead contains the head row and TBody contains the body rows.</li>
+            <li>Caption needs to be in the table element.</li>
+            <li>Margin: auto will center the block.</li>
+            <li>It is common to use a width between 900 and 1200 pixels.</li>
+            <li>We can turn off the float setting using the declaration clear:both, which tells the browser to turn off any floats (left or right) that are currently in effect.</li>
+            <li>Paragraph are easier to wrap around floated elements than lists or tables.</li>
+            <li>Bootstrap is a CSS framework that has already built out CSS structures for usage. Built on jQuery.js and popper.js.</li
+            >
+            <li>Bootstrap is probably so popular because it prioritizes mobile first development since we browse so much on smartphones today.</li>
+            <li> CDN stands for Content Delivery Network, and it is a widely-used option for incorporating a framework like jQuery or Bootstrap into a website.</li>
+            <li>In order for Bootstrap JavaScript to work, you must add jQuery and popper.js to your website, BEFORE adding Bootstrap. This is most likely because bootstrap calls code in those JS frameworks.</li>
+            <li>Meta tag is used to provide info on the webpage. Charset tells us the character set used on the page. Viewport tells the browser to look at the user's window to determine how to apply Bootstraps media queries. Tags added to this sample page.</li>
+        </ul>
+    </div>
+
+    <header class="jumbotron">
+        <h1>Matt's Embedded Portfolio</h1>
+        <h2 class="font-italic">Because I didn't want to make another HTML page.</h2>
+        <h2 class="text-right mt-5">Because I'm a lazy programmer.</h2>
+    </header>
+
+    <nav>
+        <a class="btn badge-pill" href="">Contact Me</a>
+        <a class="btn" href="">Projects</a>
+    </nav>
+
+    <div class="container-fluid" id="bootstrap">
+        <h2 class="display-4">Important points from Bootstrap section of the course.</h2>
+        <div class="row">
+            <div class="col-md">
+                <img src="portfolio/images/me.jpg" alt="Placeholder image of me." class="img-fluid">
+            </div>
+            <div class="col-md">
+                <ul>
+                    <li>Adding bootstrap via a CDN.</li>
+                    <li>Common practice to add JS files to just before the /body tag so that the user can see and use the HTML content while the browser is loading the JS in the background.</li>
+                    <li>Responsive design is to account for your user's use cases which means using programming to handle when a use case arises. Design for all contingencies and browsers. This often is talking about resizing based on browser (mobile, web).</li>
+                    <li>To be mobile first, we need to leverage Bootstraps container class divs and its 12 column grid system.</li>
+                    <li>Media queries are used in CSS to apply styles based on conditions like size of the viewport or device, orientation (landscape, portrait mode) or type of screen.</li>
+                    <li>Container vs container fluid is what is going to control whether the cells stack when the page is resized or if the cells just get more narrow in the grid system.</li>
+                </ul>
+            </div>
+        </div>
+        <ul>
+            <li>Only columns may be immediate children of rows.</li>
+            <li>Grid breakpoints are based on minimum width media queries, so they apply to that breakpoint and all of those above it. So if you just specify col-md-4, it will allot that space for the large breakpoint.</li>
+            <li>Bootstrap rewrites the default font for headings, text, inline elements, and lists.</li>
+            <li>Bootstrap makes tables easier with built in classes for alternating row styling, fixing borders, or adding color to tr and td elements.</li>
+            <li>You can make images response via bootstrap. (.img-fluid)</li>
         </ul>
     </div>
 
     <footer>
         <p>Follow me on my <a href="https://github.com/mleong1">Github</a></p>
     </footer>
+
+    <!--CDN for popper.js and jQuery frameworks-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
