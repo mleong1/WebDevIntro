@@ -1,0 +1,27 @@
+body{
+    font-family: 'Comic Sans MS', Serif;
+}
+
+.jumbotron{
+    color: #A8201A;
+    background-color: white;
+}
+h1{
+    display: block;
+    text-align: center;
+}
+
+#betInput{
+    width: 25%;
+    margin: auto;
+}
+
+.btn-group{
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    width: 20%;
+    margin: 10% auto;
+}
