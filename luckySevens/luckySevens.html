@@ -5,6 +5,8 @@
     <title>Lucky Sevens</title>
 
     <script type="text/JavaScript" src="JS/luckySevens.js"></script>
+    <!--Noticing that the CDN doesn't match the current version of 4.4.1 so bootstrap docs on things like is-invalid
+    will not work here.-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="CSS/luckySevens.css"  type="text/css">
@@ -16,24 +18,50 @@
         <h1>Lucky Sevens</h1>
     </div>
 
-    <form name="betForm">
+    <form name="betForm" onsubmit="return validateItems()">
 
-        <div class="input-group" id="betInput">
+        <div class="input-group">
             <span class="input-group-addon">$</span>
-            <input type="text" class="form-control" placeholder="0.00">
+            <input type="text" class="form-control" placeholder="0.00" id = "betInput" required>
         </div>
 
         <div class="btn-group">
             <div>
-            <button type="button" class="btn btn-outline-primary">Play</button>
+                <button type="submit" class="btn btn-outline-primary">Play</button>
             </div>
         </div>
 
     </form>
 
+    <table id="results" class="table table-striped">
+        <thead>
+        <tr>
+            <th colspan="2">Results</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Starting Bet</td>
+            <td><span id="startBetRes"></span></td>
+        </tr>
+        <tr>
+            <td>Total Rolls Before Going Broke</td>
+            <td><span id="totalRollsRes"></span></td>
+        </tr>
+        <tr>
+            <td>Highest Amount Won</td>
+            <td><span id="maxMoneyRes"></span></td>
+        </tr>
+        <tr>
+            <td>Roll Count at Highest Amount Won</td>
+            <td><span id="maxMoneyRollRes"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
     <!--CDN for popper.js and jQuery frameworks-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

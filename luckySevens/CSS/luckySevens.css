@@ -11,7 +11,7 @@ h1{
     text-align: center;
 }
 
-#betInput{
+.input-group{
     width: 25%;
     margin: auto;
 }
@@ -24,4 +24,14 @@ h1{
 button{
     width: 20%;
     margin: 10% auto;
+}
+
+table{
+    margin-top: 2.5%;
+    border-top: 1px solid black;
+}
+
+th{
+    font-size: 2.5em;
+    text-align: center;
 }
