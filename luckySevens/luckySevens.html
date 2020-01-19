@@ -29,35 +29,48 @@
             <div>
                 <button type="submit" class="btn btn-outline-primary">Play</button>
             </div>
+
+            <!-- Was going to implement a play again button, but the initial play button serves this
+            purpose. This also follows the wireframe a little more closely.
+            <div>
+                <button type="submit" id="resetBtn" class="btn btn-outline-primary" style="display: none">Play Again?</button>
+            </div>
+            -->
         </div>
 
     </form>
 
-    <table id="results" class="table table-striped">
-        <thead>
-        <tr>
-            <th colspan="2">Results</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Starting Bet</td>
-            <td><span id="startBetRes"></span></td>
-        </tr>
-        <tr>
-            <td>Total Rolls Before Going Broke</td>
-            <td><span id="totalRollsRes"></span></td>
-        </tr>
-        <tr>
-            <td>Highest Amount Won</td>
-            <td><span id="maxMoneyRes"></span></td>
-        </tr>
-        <tr>
-            <td>Roll Count at Highest Amount Won</td>
-            <td><span id="maxMoneyRollRes"></span></td>
-        </tr>
-        </tbody>
-    </table>
+    <div id="results" style="display: none">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th colspan="2">Results</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Starting Bet</td>
+                <td><span id="startBetRes"></span></td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td><span id="totalRollsRes"></span></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="maxMoneyRes"></span></td>
+            </tr>
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="maxMoneyRollRes"></span></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <p>To play again, keep your starting bet or pick another one, and click the play button again.</p>
+        </footer>
+    </div>
 
     <!--CDN for popper.js and jQuery frameworks-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

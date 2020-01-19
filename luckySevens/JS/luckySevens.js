@@ -67,6 +67,7 @@ function validateItems() {
     console.log("Roll Count at Highest Amount Won: " + values[2]);
      */
 
+    document.getElementById("results").removeAttribute("style");
     document.getElementById("startBetRes").innerText = startingBet;
     document.getElementById("totalRollsRes").innerText = values[0];
     document.getElementById("maxMoneyRes").innerText = values[1];
