@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
-    <link href="CSS/restaurantStyles.css" rel="stylesheet" type="text/css">
     <!--Noticing that the CDN doesn't match the current version of 4.4.1 so bootstrap docs on things like is-invalid
     will not work here.-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -13,40 +12,63 @@
         label, legend{
             font-weight: bold;
         }
+        label{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 <!--Menu is here for testing remove later-->
-<header>
+<header class="jumbotron">
     <h1>Matt's Burger Shack</h1>
 </header>
 
 <nav>
-    <a class="btn badge-pill" href="index.html">Home</a>
+    <a class="btn badge-pill" href="index.html"><ion-icon name="home"></ion-icon></a>
     <a class="btn badge-pill" href="menu.html">Menu</a>
     <a class="btn badge-pill" href="contactUs.html">Contact Us</a>
 </nav>
 
-<form action="contactUs.html" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"> <br />
+<form name="Contact Us">
+    <div class="form-group row">
+        <label for="name" class="col-md-2 col-form-label">Name:</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+    </div>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="name"> <br />
+    <div class="form-group row">
+        <label for="email" class="col-md-2 col-form-label">Email:</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="email" name="name">
+        </div>
+    </div>
 
-    <label for="phone">Phone:</label>
-    <input type="text" id="phone" name="name"> <br />
+    <div class="form-group row">
+        <label for="phone" class="col-md-2 col-form-label">Phone:</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="phone" name="name">
+        </div>
+    </div>
 
-    <label for="reason">Reason for inquiry</label>
-    <select id="reason" name="reason">
-        <option value="catering" selected>Catering</option>
-        <option value="Private Party">Private Party</option>
-        <option value="Feedback">Feedback</option>
-        <option value="Other">Other</option>
-    </select> <br />
+    <div class="form-group row">
+        <label for="reason" class="col-md-2 col-form-label">Reason for inquiry:</label>
+        <div class="col-md-4">
+            <select id="reason" class="form-control" name="reason">
+                <option value="catering" selected>Catering</option>
+                <option value="Private Party">Private Party</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
 
-    <label for="info">Additional Information:</label>
-    <textarea id="info" name="info"></textarea>
+    <div class="form-group row">
+        <label for="info" class="col-md-2 col-form-label">Additional Information:</label>
+        <div class="col-md-4">
+            <textarea id="info" class="form-control" name="info"></textarea>
+        </div>
+    </div>
 
     <fieldset>
         <legend>Have you been to the restaurant?</legend>
@@ -83,6 +105,7 @@
 <!--CDN for popper.js and jQuery frameworks-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </body>
 </html>

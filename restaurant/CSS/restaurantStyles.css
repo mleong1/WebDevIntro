@@ -1,6 +1,13 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
 body{
     font-family: Gelasio, sans-serif;
     background-color: #836853;
+    /*Margin bottom to account for the sticky footer*/
+    margin-bottom: 100px;
 }
 
 header{
@@ -20,9 +27,12 @@ figure{
 }
 
 footer{
-    height: 100px;
+    height: 80px;
     background-color: #ec9a29;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -44,4 +54,9 @@ nav a:active{
 
 nav a:visited{
     color: #FF6961;
+}
+
+.carousel-caption{
+    color: black;
+    background-color: wheat;
 }
