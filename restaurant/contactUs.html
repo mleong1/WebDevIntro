@@ -11,10 +11,20 @@
     <style>
         label, legend{
             font-weight: bold;
+            font-size: 1.0em;
         }
         label{
             text-align: center;
         }
+
+        .btn-group{
+            margin-top: 10%;
+        }
+
+        form{
+            margin-top: 5%;
+        }
+
     </style>
 </head>
 <body>
@@ -29,31 +39,31 @@
     <a class="btn badge-pill" href="contactUs.html">Contact Us</a>
 </nav>
 
-<form name="Contact Us">
+<form name="contactUs" onsubmit="return validateItems();">
     <div class="form-group row">
-        <label for="name" class="col-md-2 col-form-label">Name:</label>
-        <div class="col-md-4">
+        <label for="name" class="col-md-3 col-form-label">Name:</label>
+        <div class="col-md-6">
             <input type="text" class="form-control" id="name" name="name">
         </div>
     </div>
 
     <div class="form-group row">
-        <label for="email" class="col-md-2 col-form-label">Email:</label>
-        <div class="col-md-4">
-            <input type="text" class="form-control" id="email" name="name">
+        <label for="email" class="col-md-3 col-form-label">Email:</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="email" name="email">
         </div>
     </div>
 
     <div class="form-group row">
-        <label for="phone" class="col-md-2 col-form-label">Phone:</label>
-        <div class="col-md-4">
-            <input type="text" class="form-control" id="phone" name="name">
+        <label for="phone" class="col-md-3 col-form-label">Phone:</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="phone" name="phone">
         </div>
     </div>
 
     <div class="form-group row">
-        <label for="reason" class="col-md-2 col-form-label">Reason for inquiry:</label>
-        <div class="col-md-4">
+        <label for="reason" class="col-md-3 col-form-label">Reason for inquiry:</label>
+        <div class="col-md-6">
             <select id="reason" class="form-control" name="reason">
                 <option value="catering" selected>Catering</option>
                 <option value="Private Party">Private Party</option>
@@ -64,35 +74,57 @@
     </div>
 
     <div class="form-group row">
-        <label for="info" class="col-md-2 col-form-label">Additional Information:</label>
-        <div class="col-md-4">
+        <label for="info" class="col-md-3 col-form-label">Additional Information:</label>
+        <div class="col-md-6">
             <textarea id="info" class="form-control" name="info"></textarea>
         </div>
     </div>
 
-    <fieldset>
-        <legend>Have you been to the restaurant?</legend>
-        <input type="radio" id="choice1" name="question" value="yes">
-        <label for="choice1">Yes</label>
-        <input type="radio" id="choice2" name="question" value="no" checked>
-        <label for="choice2">No</label>
-    </fieldset>
+    <div class="row">
+        <legend class="col-md-3">Have you been to the restaurant?</legend>
+        <div class="col-md-6">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No" checked>
+                <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+        </div>
+    </div>
 
-    <fieldset>
-        <legend>Best days to contact you:</legend>
-        <input type="checkbox" id="m" name="day" value="m">
-        <label for="m">M</label>
-        <input type="checkbox" id="t" name="day" value="t">
-        <label for="t">T</label>
-        <input type="checkbox" id="w" name="day" value="w">
-        <label for="w">W</label>
-        <input type="checkbox" id="th" name="day" value="th">
-        <label for="th">Th</label>
-        <input type="checkbox" id="f" name="day" value="f">
-        <label for="f">F</label>
-    </fieldset>
+    <div class="row">
+        <legend class="col-md-3">Best days to contact you:</legend>
+        <div class="col-md-6">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="checkBoxOptions" id="inlineCheckbox1" value="Mon">
+                <label class="form-check-label" for="inlineCheckbox1">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="checkBoxOptions" id="inlineCheckbox2" value="Tue">
+                <label class="form-check-label" for="inlineCheckbox2">T</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="checkBoxOptions" id="inlineCheckbox3" value="Wed">
+                <label class="form-check-label" for="inlineCheckbox3">W</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="checkBoxOptions" id="inlineCheckbox4" value="Thu">
+                <label class="form-check-label" for="inlineCheckbox4">Th</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="checkBoxOptions" id="inlineCheckbox5" value="Fri">
+                <label class="form-check-label" for="inlineCheckbox5">F</label>
+            </div>
+        </div>
+    </div>
 
-    <input type="submit" name="submit" value="Submit Request">
+    <div class="btn-group">
+        <div>
+            <button type="submit" class="btn">Submit Request</button>
+        </div>
+    </div>
 </form>
 
 
@@ -106,6 +138,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script type="text/javascript" src="JS/contactUs.js"></script>
+
+<!--NoScript tag to handle displaying a message when JS is disabled.-->
+<noscript>JavaScript is disabled in your browser. Please view this site using JavaScript.</noscript>
 
 </body>
 </html>
