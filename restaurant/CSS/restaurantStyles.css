@@ -3,17 +3,26 @@ body{
     background-color: #836853;
 }
 
-header, footer{
-    background-color: #ec9a29;
-    height: 100px;
+header{
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    color: #A8201A;
 }
 
-header h1, nav a{
+figure{
+    margin-top: 2.5%;
+}
+
+.jumbotron{
     font-family: 'Seymour One', Serif;
+    background-color: #ec9a29;
     color: #A8201A;
+    margin-bottom: 0;
+}
+
+footer{
+    height: 100px;
+    background-color: #ec9a29;
+    text-align: center;
 }
 
 
@@ -25,6 +34,7 @@ nav{
 }
 
 nav a:hover{
+    background-color: #A8201A;
     font-weight: bold;
 }
 
